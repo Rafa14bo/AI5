@@ -1,0 +1,33 @@
+import { MessageCircle } from "lucide-react";
+import { Reveal } from "./reveal";
+import { empresa, whatsappLink } from "@/lib/riomar";
+
+export function CtaFinal() {
+  return (
+    <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+      <Reveal>
+        <div className="surface-deep relative overflow-hidden rounded-3xl px-6 py-16 text-center shadow-lift sm:px-12 lg:py-24">
+          <div
+            className="bg-blueprint pointer-events-none absolute inset-0 opacity-20"
+            aria-hidden="true"
+          />
+
+          <h2 className="relative mx-auto max-w-3xl text-3xl font-extrabold text-deep-foreground sm:text-4xl lg:text-5xl">
+            Vamos conversar sobre sua próxima obra?
+          </h2>
+          <p className="relative mx-auto mt-5 max-w-xl text-base leading-relaxed text-deep-foreground/70">
+            Do alicerce ao acabamento, nossa equipe ajuda você a escolher os materiais certos.
+          </p>
+          <a
+            href={whatsappLink(empresa.whatsappPrincipal)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative mt-9 inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-4 text-sm font-bold text-primary-foreground shadow-[0_20px_45px_-12px_oklch(0.48_0.15_250/0.65)] transition-all hover:-translate-y-0.5 hover:shadow-[0_24px_55px_-10px_oklch(0.48_0.15_250/0.8)]"
+          >
+            <MessageCircle className="size-4" /> Falar pelo WhatsApp
+          </a>
+        </div>
+      </Reveal>
+    </section>
+  );
+}

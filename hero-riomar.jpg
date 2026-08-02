@@ -1,0 +1,22 @@
+import { MessageCircle } from "lucide-react";
+import { empresa, whatsappLink } from "@/lib/riomar";
+
+export function WhatsAppFlutuante() {
+  return (
+    <div className="fixed bottom-5 right-5 z-[60]">
+      <span
+        className="animate-pulse-ring pointer-events-none absolute inset-0 rounded-2xl bg-whatsapp"
+        aria-hidden="true"
+      />
+      <a
+        href={whatsappLink(empresa.whatsappPrincipal)}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com a Riomar Construção no WhatsApp"
+        className="relative grid size-14 place-items-center rounded-2xl bg-whatsapp text-deep-foreground shadow-lift transition-transform hover:scale-105"
+      >
+        <MessageCircle className="size-6" />
+      </a>
+    </div>
+  );
+}

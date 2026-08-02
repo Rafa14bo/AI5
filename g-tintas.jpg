@@ -1,0 +1,88 @@
+import { ArrowRight, MapPin, MessageCircle } from "lucide-react";
+import heroImg from "@/assets/hero-riomar.jpg";
+import { empresa, whatsappLink } from "@/lib/riomar";
+
+export function Hero() {
+  return (
+    <section id="inicio" className="relative isolate overflow-hidden">
+      <img
+        src={heroImg}
+        alt="Interior da loja de materiais de construção RIOMAR em Barretos, com revestimentos, tintas e cimento organizados"
+        width={1920}
+        height={1280}
+        fetchPriority="high"
+        className="absolute inset-0 -z-10 size-full object-cover"
+      />
+      <div
+        className="absolute inset-0 -z-10 bg-[linear-gradient(105deg,oklch(0.19_0.06_254/0.94)_0%,oklch(0.19_0.06_254/0.82)_45%,oklch(0.19_0.06_254/0.45)_100%)]"
+        aria-hidden="true"
+      />
+      <div className="bg-blueprint absolute inset-0 -z-10 opacity-30" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute -right-24 -top-24 -z-10 size-[420px] rounded-full bg-primary/30 blur-[120px]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-32 left-1/4 -z-10 size-[360px] rounded-full bg-whatsapp/15 blur-[130px]"
+        aria-hidden="true"
+      />
+
+      <div className="mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-center px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <div className="max-w-2xl text-deep-foreground">
+          <p className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur">
+            <MapPin className="size-3.5" /> Barretos · São Paulo
+          </p>
+
+          <h1 className="animate-fade-in mt-6 text-4xl font-extrabold leading-[1.05] sm:text-6xl lg:text-7xl">
+            Tudo para sua obra,
+            <span className="block text-white/70">do alicerce ao acabamento.</span>
+          </h1>
+
+          <p className="animate-fade-in mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            A RIOMAR CONSTRUÇÃO é uma loja de materiais de construção em Barretos, com atendimento
+            direto por WhatsApp e uma equipe de vendedores pronta para orientar você em cada etapa
+            da sua construção ou reforma.
+          </p>
+
+          <div className="animate-fade-in mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={whatsappLink(empresa.whatsappPrincipal)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 text-sm font-bold text-primary-foreground shadow-[0_20px_45px_-12px_oklch(0.48_0.15_250/0.65)] transition-all hover:-translate-y-0.5 hover:shadow-[0_24px_55px_-10px_oklch(0.48_0.15_250/0.8)]"
+            >
+              <MessageCircle className="size-4" /> Solicitar orçamento
+            </a>
+            <a
+              href="#servicos"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-6 py-4 text-sm font-bold text-deep-foreground backdrop-blur transition-colors hover:bg-white/15"
+            >
+              Conhecer nossos serviços <ArrowRight className="size-4" />
+            </a>
+          </div>
+
+          <dl className="animate-fade-in mt-14 grid max-w-lg grid-cols-1 gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Telefone
+              </dt>
+              <dd className="mt-1 text-sm font-bold">{empresa.telefone}</dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Instagram
+              </dt>
+              <dd className="mt-1 text-sm font-bold">{empresa.instagramHandle}</dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Bairro
+              </dt>
+              <dd className="mt-1 text-sm font-bold">Bom Jesus</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  );
+}

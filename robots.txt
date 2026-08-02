@@ -1,0 +1,41 @@
+/**
+ * Dados oficiais da RIOMAR CONSTRUÇÃO.
+ * Fontes: Google Maps (perfil oficial), Linktree @riomarbtos, Instagram @riomarbarretos.
+ * Nenhuma informação aqui deve ser inventada — edite este arquivo para atualizar o site.
+ */
+
+export const empresa = {
+  nome: "RIOMAR CONSTRUÇÃO",
+  cidade: "Barretos",
+  estado: "SP",
+  endereco: "Av. Messias Gonçalves, 1241 — Bom Jesus",
+  cep: "14781-090",
+  telefone: "(17) 3321-0300",
+  telefoneHref: "tel:+551733210300",
+  whatsappPrincipal: "5517991421656",
+  instagram: "https://www.instagram.com/riomarbarretos/",
+  instagramHandle: "@riomarbarretos",
+  linktree: "https://linktr.ee/riomarbtos",
+  maps: "https://maps.app.goo.gl/CD51KoGrzPnss1Xu5",
+  coords: { lat: -20.5377544, lng: -48.5642457 },
+} as const;
+
+export const whatsappLink = (numero: string, texto = "Olá, gostaria de um orçamento.") =>
+  `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+/** Atendentes divulgados no Linktree oficial da empresa. */
+export const vendedores = [
+  { nome: "Adriano", numero: "5517981055418" },
+  { nome: "Cristian", numero: "5517997499497" },
+  { nome: "Lilian", numero: "5517981247363" },
+  { nome: "Concreto 1000", numero: "5517997590709" },
+] as const;
+
+export const navegacao = [
+  { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Serviços", href: "#servicos" },
+  { label: "Projetos", href: "#projetos" },
+  { label: "Galeria", href: "#galeria" },
+  { label: "Contato", href: "#contato" },
+] as const;
